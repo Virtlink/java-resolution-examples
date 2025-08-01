@@ -1,17 +1,17 @@
 @file:Suppress("warnings", "PackageDirectoryMismatch", "MayBeConstant", "unused", "UnusedImport", "SortModifiers",
-    "SortModifiers"
+    "SortModifiers", "RedundantSemicolon"
 )
-package inner_base_classes
+package inner_base_classes;
 
 open class ABase() : Any() {
-    open val a2: Int = 4
-    open val x: Int = 4         // (4)
+    open val a2: Int = 4;
+    open val x: Int = 4;         // (4)
     open class BBase() : ABase() {
-        open val b2: Int = 5
-        override open val x: Int = 5     // (3)
+        open val b2: Int = 5;
+        override open val x: Int = 5;     // (3)
         open class CBase() : BBase() {
-            open val c2: Int = 6
-            override open val x: Int = 6     // (2)
+            open val c2: Int = 6;
+            override open val x: Int = 6;     // (2)
         }
     }
 }
