@@ -22,7 +22,20 @@ class Outer : OuterParent() {
             companion object {
                 open val x: Int = 4
             }
-            val test = x
+            val test01 = x                      // 1 ... 17
+            val test02 = this.x                 // 1, 2, 3
+            val test03 = this@Nested.x          // 7, 8, 9
+            val test04 = super.x                // 2, 3
+            val test05 = super@Nested.x         // 8, 9
+            val test06 = Inner.x                // 4
+            val test07 = Nested.x               // 10
+            val test08 = Outer.x                // 13
+            val test09 = InnerParent.x          // 5
+            val test10 = NestedParent.x         // 11
+            val test11 = OuterParent.x          // 14
+            val test12 = InnerBase.x            // 6
+            val test13 = NestedBase.x           // 12
+            val test14 = OuterBase.x            // 15
         }
     }
 }
